@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Ingress-ice by nibogd</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Ingress-ice</h1>
+        <h2>Automatic screenshooter for ingress intel map</h2>
+        <a href="https://github.com/nibogd/ingress-ice" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="ingress-ice" class="anchor" href="#ingress-ice"><span class="octicon octicon-link"></span></a>ingress-ice</h1>
+
+<p>Automatic screenshooter for ingress intel map.</p>
+
+<h1>
+<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features:</h1>
+
+<ul>
+<li>Captures screenshots of ingress intel map every <em>n</em> seconds</li>
+<li>Set your location </li>
+<li>Supports 2-step authentication</li>
+<li>Doesn't require X server to be run.</li>
+<li>[Linux only] <a href="https://raw.githubusercontent.com/nibogd/ingress-ice/master/make_video.sh">Download</a> and run <code>./make_video.sh</code> to make a video. This script original is <a href="https://github.com/schinken/ingress-screenshot/blob/master/make_video.sh">here</a>.</li>
+</ul><h1>
+<a name="download" class="anchor" href="#download"><span class="octicon octicon-link"></span></a><a href="https://github.com/nibogd/ingress-ice/releases">Download</a>
+</h1>
+
+<ul>
+<li><a href="https://github.com/nibogd/ingress-ice/releases/download/v1-win32/ice-win32.zip">Windows</a></li>
+<li><a href="https://github.com/nibogd/ingress-ice/releases/download/v1-linux/ice-linux.tar">Linux</a></li>
+</ul><p>On windows all included, on linux to install the dependences on Red Hat based system run:</p>
+
+<pre><code>sudo yum install fontconfig freetype libfreetype.so.6 libfontconfig.so.1 libstdc++.so.6
+</code></pre>
+
+<p>For Ubuntu use apt-get instead of yum, on Arch use pacman -S, etc. Package names may differ in different distros, and they may be already installed.</p>
+
+<h1>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h1>
+
+<p>Unpack the archieve wherever you want.</p>
+
+<p>Change the variables in the script. Open <code>ice.js</code> with your favourite editor and set the <code>l</code> variable to your google login (fill it in the quotes), <code>p</code> variable to your google password (required for viewing the map, don't worry, we don't store your passwords). In the fourth line inscribe the link to your location in Ingress Intel, to get it:</p>
+
+<ul>
+<li>Navigate to <a href="http://ingress.com/intel">Ingress Intel Map</a>
+</li>
+<li>Zoom to the location you want to capture</li>
+<li>Click on the 'link' button in the top right corner and copy the link.</li>
+</ul><p>The link contains your longitude and latitude and zoom level. For Tokyo it is <a href="https://www.ingress.com/intel?ll=35.682398,139.693909&amp;z=11">https://www.ingress.com/intel?ll=35.682398,139.693909&amp;z=11</a> . In the 4th line set the delay between screenshot captures in milliseconds (1s = 1000ms). </p>
+
+<p>When the variables are set, run the file:</p>
+
+<ul>
+<li>On windows run <code>start.cmd</code>
+</li>
+<li>On linux run <code>./phantomjs ice.js</code> from the console</li>
+</ul><p>If you use 2-factor authentication, you will be prompted for the code.</p>
+
+<p>It will save captured screenshots with into <code>Ice0.png</code>, <code>Ice1.png</code>...</p>
+
+<p>ICE uses <a href="http://phantomjs.org/">PhantomJS</a>, it's binary is packed with the script.</p>
+
+<hr><p>Ingress trademark belongs to Google, Inc.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/nibogd/ingress-ice/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/nibogd/ingress-ice/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/nibogd/ingress-ice"></a> is maintained by <a href="https://github.com/nibogd">nibogd</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-38659308-8");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
