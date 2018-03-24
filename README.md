@@ -57,6 +57,12 @@ If you want to reconfigure the script, just double click `reconfigure.cmd`. If y
 
 If you want to reconfigure the script, run `./ingress-ice.sh -r`. If you want to use cookies instead of login and password, see [cookies authentication](https://github.com/nibogd/ingress-ice/wiki/Cookies-Authentication). In case Ingress ICE crashes sometimes, run it with option `-s`: it will run ICE in an endless loop.
 
+### Docker
+Install Docker and `docker-compose`. Then, use the `docker-compose.yml` provided:
+```
+docker-compose up --build
+```
+
 #### Creating videos
 To create a video from your screenshots, you can use *MPlayer* [(Windows download)](http://oss.netfarm.it/mplayer-win32.php) (install from your repo if on linux). It includes a `mencoder` command. The following will produce an `.avi` video:
 (Detailed instruction for windows [here](https://github.com/nibogd/ingress-ice/wiki/Creating-videos-(Windows)))
