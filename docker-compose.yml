@@ -1,0 +1,18 @@
+version: "3"
+services:
+  ingress-ice:
+    container_name: ingress-ice
+    image: 3ch01c/ingress-ice
+    build:
+      context: .
+      args:
+        - http_proxy
+        - https_proxy
+        - no_proxy
+    environment:
+      - http_proxy
+      - https_proxy
+      - no_proxy
+    volumes:
+      - ./screenshots:/srv/ingress-ice/screenshots
+      - ./.ingress-ice.conf:/srv/ingress-ice/.ingress-ice.conf

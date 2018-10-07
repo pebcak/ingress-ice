@@ -1,0 +1,75 @@
+# This is a configuration file for Ingress Ice (github.com/nibogd/ingress-ice)
+# Insert your settings here (after '=' without spaces). Only first three settings (login, password and area link) are mandatory.
+#
+# After modifying this file, save it and close the editor. Ice will start automatically.
+
+[ice]
+#> Your Google login and password
+login=
+password=
+#> Your area link. To get it, visit http://ingress.com/intel, scroll the map to your location and press [LINK] at the top right corner. Copy that link and paste it here.
+#> e. g. https://www.ingress.com/intel?ll=53.502328,49.41516&z=14
+area=
+
+[ice-optional]
+#> The delay between taking screenshots in milliseconds (1 second = 1000 milliseconds). Set to -1 to take a single screenshot and exit
+delay=300000
+#> Minimal and maximal portal levels to display
+minlevel=1
+maxlevel=8
+#> Width and height of the resulting screenshot
+width=1366
+height=768
+#> Inject IITC? (true/false)
+iitc=false
+plugins=["https://static.iitc.me/build/release/plugins/link-show-direction.user.js"]
+# Read more at https://github.com/nibogd/ingress-ice/wiki/Loading-IITC-plugins
+pluginsConfig=[{"key":"plugin-linkshowdirection-mode","value":"Static near origin"},{"key":"iitc-base-map","value":"Google Roads"}]
+#> Put a timestamp on your screenshots? (true/false)
+timestamp=true
+#> Hide Resistance portals/links/fields, Enlightened portals/links/fields, links, fields respectively? (true/false)
+hideRes=false
+hideEnl=false
+hideLink=false
+hideField=false
+# Picture format (png/jpg)
+format=png
+#> Log in timeout. Default is 10 000 (ms). If you have problems with signing in, increasing this may help
+loginTimeout=10000
+#> Directory (folder) where to save screenshots. Note the trailing slash. Relative to the current location. In linux, you can start it from any folder like this:
+# $ some-folder/ingress-ice/ingress-ice.sh
+directory=screenshots/
+#> Add timezone to timestamp? (true/false)
+timezone=false
+#> Path to a log file for saving JS console messages (will not save if empty)
+consoleLog=
+
+[cookies]
+#> If set, will use cookies for authentication instead of login/password
+SACSID=
+CSRF=
+
+[Amazon-S3]
+#> If set, will upload screenshots to Amazon S3 cloud
+#> AWS S3 accessKeyId
+S3Key=
+#> AWS S3 secretKeyId
+S3Secret=
+#> AWS S3 bucket name
+S3Bucket=
+#> AWS S3 access control list
+S3Alc=
+#> Delete files after upload? (true/false)
+S3Remove=false
+
+[Dropbox]
+#> If set, will upload screenshots to Dropbox
+#> Dropbox access-token
+DropboxToken=
+#> Dropbox upload Directory path (/path/)
+DropboxPath=
+#> Delete files after upload? (true/false)
+DropboxRemove=false
+
+[version]
+version=44
